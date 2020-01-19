@@ -8,6 +8,6 @@ public abstract class Computer {
 	
 	public String toString()
 	{
-		return "\n\tRAM : "+this.getRAM()+"\n\tHDD : "+this.getHDD()+"\n\tCPU : "+this.getCPU();
+		  return "\n\tRAM : "+this.getRAM()+"\n\tHDD : "+this.getHDD()+"\n\tCPU : "+this.getCPU();
 	}
 }

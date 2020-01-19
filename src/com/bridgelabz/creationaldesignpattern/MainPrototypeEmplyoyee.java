@@ -3,7 +3,7 @@ package com.bridgelabz.creationaldesignpattern;
 import java.util.List;
 
 public class MainPrototypeEmplyoyee {
-
+	
 	public static void main(String[] args) {
 	PrototypeEmployee employee = new PrototypeEmployee();
 	employee.loadData();
@@ -16,9 +16,11 @@ public class MainPrototypeEmplyoyee {
 		
 	List<String> list1 = employee1.getEmpList();
 	list1.add("Narayan");
+	list1.add("MEstry");
 	
 	List<String> list2 = employee2.getEmpList();
 	list2.remove("Chetan");
+	list2.remove("Mestry");
 	
 	System.out.println("Original Employee Object : "+employee.getEmpList());
 	System.out.println("Modified Employee 1 : "+employee1.getEmpList());
@@ -28,3 +30,4 @@ public class MainPrototypeEmplyoyee {
 	}
 
 }
+// I am on develop branch ..
