@@ -8,6 +8,7 @@ public class ObserverPatternTest {
 		Subscriber s2 = new Subscriber("Chetan");
 		Subscriber s3 = new Subscriber("Mandar");
 		Subscriber s4 = new Subscriber("Akshay");
+		//.
 		
 		technoLearn.subscribe(s1);
 		technoLearn.subscribe(s2);
