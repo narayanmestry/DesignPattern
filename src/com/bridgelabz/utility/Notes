@@ -1,0 +1,224 @@
+
+@Design Pattern 
+--------------------------------------------------------------------
+
+
+    Creational Design Patterns
+    ***************************
+       1] Singleton Pattern
+	--------------------
+		--  restricts the instantiation of a class and ensures that only one instance of the class exists in the Java virtual machine.
+		--  @There are different approches to Implement Singleton Pattern 
+
+			1. Eager initialization
+			------------------------
+				--* instance of Singleton Class is created at the time of class loading
+
+				--* drawback : instance is created even though client application might not be using it. 
+
+				--  If your singleton class is not using a lot of resources, this is the approach to use.
+
+				--  But in most of the scenarios, Singleton classes are created for resources
+			            such as File System, Database connections, etc. We should avoid the instantiation 
+				    until unless client calls the getInstance method.	
+
+				--* no option for Exception Handling 
+
+		
+			2. Static block initialization
+			--------------------------------
+				-- Similar to eager except Instantiation of class created in Static block 
+
+				-- and it provide option for Exception Handling
+	
+		
+			*** both Eager and and Static Instantiation create the Instance before its being used  
+			    and that is not a best priactice to do 
+			    So further Approches have come 
+	
+
+			3. Lazy Initialization
+			---------------------------
+				-- instance of a class create in globally access static getInstance method
+
+				-- lazy fine for Single Thread envoirment , but if multiple thread came into
+				   if condtion then it will cause issue , means it Destroy the Singleton property
+			           and make different instance for different thread
+				
+				-- so Thread safe Approche Come
+					  
+		
+			4. Thread Safe Singleton
+			---------------------------
+				-- in that , global instance method must have Thread Safe, means we should do 
+				   method as Synchronized .
+				   so only one Thread can Execute at one time
+
+			5. Bill Pugh Singleton Implementation
+			-------------------------------------
+				-- in above, thread safe its fine that it provide thread safety but it reduce the 
+				   Performance becoz of Sychronized method
+				-- so to solve this problem , we use "Double checking Principle"
+				-- in that we used two if condition and  synchronized block
+
+
+
+	
+        2] Factory Pattern
+	------------------------
+		-- Used ,When we have Super class and Multiple subclass and we need to return subclass based on input .
+		-- this pattern take responcibilty of subclass .
+
+        3] Abstract Factory Pattern
+	---------------------------------
+
+        4] Builder Pattern
+        ---------------------------------
+
+	5] Prototype Pattern
+	---------------------------------
+		-- used , when we have one object and want it multiple time ,
+		-- so in normal way ,we create this indtance at multiple time it will require lot og memory 
+		-- so prototype pattern provide Concept of Object cloning 
+		-- means copy the object data into new Object anf pass it for futher modificaton
+
+============================================================================================================================================ 
+    Structural Design Patterns
+*******************************
+        1] Adapter Pattern :
+	--------------------
+		-- What is Adapter  ? 
+ 			-- Adapter is class that join two unreleted or incompatible interfaces, so 
+		
+		-- Adapter pattern can join this two unreleted interfaces , from which two interfaces can woek together 
+		
+		-- we can implement adapter pattern in two way :
+			1. Class Adapter : 	
+				-- we have to use inharitance and exted the source class
+			2. Object Adapter : 
+				-- we have to use Composotion .and implement
+
+		
+        2] Composite Pattern :
+	-----------------------
+		
+        3] Proxy Pattern
+	-----------------------
+        	-- used , when we want to control the access of Functionality
+	
+
+	4] Flyweight Pattern
+	-----------------------
+		-- 
+        
+	5] Facade Pattern
+	-----------------------    	    
+		-- It provide unified interface of set of all interfaces in system from which System make easy to use .
+		-- eg .I want buy a phone and and i want to get details . so in the world there lot of company 
+		       if i go to each company and ask price and featurs its very time consuming anf meaning less task
+			instead of that we can go directy to Mobile shopkeeper and ask him ..becaz he have the all  details 
+			and we can know also which is better 
+	
+	
+	6] Bridge Pattern
+	-----------------------        
+	
+	7]Decorator Pattern
+	----------------------
+
+=======================================================================================================================================	
+    Behavioral Design Patterns
+--------------------------------------
+        1] Template Method Pattern
+		-- define step to execute the algorithm
+		-- in that we have to take one abstract class and in that we have to declare the menthod actions as per your requirement
+		  
+		  
+        2] Mediator Pattern
+	------------------------
+		-- Used to cetralize the Communication mediam between multiple Objects .
+		-- Helpfull for EE where multiple object commmunicate each other .
+		-- mediator pattern  focus on loosely counpling betwwen objects .
+
+		eg . Relway traffic controller
+		     Air traffic controller
+		     group chat
+
+ 
+        3] Chain of Responsibility Pattern
+        4] Observer Pattern
+	----------------------
+		-- used when we have to implement one to many repeletionahip 
+		-- in that , there is one Object is subject and which is Observe by all object 
+			     remaining all object are observers which observer the single object
+		-- in Observer pattern , when state of object get chenged that time  others object must get the Notification of state of that 			   object
+
+        5] Strategy Pattern
+        6] Command Pattern
+        7] State Pattern
+        8] Visitor Pattern
+	----------------------
+		
+        9] Interpreter Pattern
+        10] Iterator Pattern
+        11] Memento Pattern
+    
+
+
+
+Miscellaneous Design Patterns
+        DAO Design Pattern
+        Dependency Injection Pattern
+        MVC Pattern
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
